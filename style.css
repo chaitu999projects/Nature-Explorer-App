@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #e4f0f5 100%);
+  min-height: 100vh;
+}
+
+#formOfTheNature {
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+  position: relative;
+}
+
+#userInput {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+#userInput:focus {
+  outline: none;
+  border-color: #4caf50;
+  box-shadow: 0 5px 20px rgba(76, 175, 80, 0.2);
+}
+
+#formOfTheNature button {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  bottom: 5px;
+  background: linear-gradient(45deg, #4caf50, #8bc34a);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  padding: 0 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(76, 175, 80, 0.3);
+}
+
+#formOfTheNature button:hover {
+  background: linear-gradient(45deg, #3e8e41, #7cb342);
+  transform: translateY(-2px);
+}
+
+h1 {
+  text-align: center;
+  margin: 30px 0;
+  font-family: "Playfair Display", serif;
+  color: #2c3e50;
+  font-size: 2.5rem;
+  background: linear-gradient(to right, #4caf50, #2196f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#searchResult {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+#searchResult a {
+  display: block;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  height: 250px;
+  position: relative;
+}
+
+#searchResult a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+#searchResult img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+#searchResult a:hover img {
+  transform: scale(1.05);
+}
+
+#moreImgs {
+  display: none;
+  margin: 30px auto;
+  padding: 12px 30px;
+  background: linear-gradient(45deg, #2196f3, #00bcd4);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
+}
+
+#moreImgs:hover {
+  background: linear-gradient(45deg, #1976d2, #0097a7);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 20px rgba(33, 150, 243, 0.4);
+}
+
+#moreImgs:active {
+  transform: translateY(0);
+}
+
+.watermark {
+  text-align: center;
+  margin-top: 40px;
+  color: #95a5a6;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  #searchResult {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  #userInput {
+    font-size: 16px;
+    padding: 12px 15px;
+  }
+
+  #formOfTheNature button {
+    padding: 0 15px;
+    font-size: 14px;
+  }
+}
